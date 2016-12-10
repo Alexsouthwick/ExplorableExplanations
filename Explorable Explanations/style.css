@@ -1,0 +1,24 @@
+h1{
+    font-family: "Trebuchet MS", Helvetica;
+    text-align: center;
+
+}
+
+canvas{
+    vertical-align: top;
+    }
+
+p{
+    display:inline-block;
+    text-align: center;
+    margin-left: 500px;
+    height:50px;
+    width:500px;
+
+}
+ button {
+    background-color:red;
+    border-radius: 20%;
+ }
+
+
