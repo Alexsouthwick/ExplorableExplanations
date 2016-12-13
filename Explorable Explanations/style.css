@@ -2,23 +2,37 @@ h1{
     font-family: "Trebuchet MS", Helvetica;
     text-align: center;
 
+} 
+body{
+    background-color: #D8ECFC;
 }
 
 canvas{
     vertical-align: top;
+    margin-left: 32%;
     }
 
 p{
     display:inline-block;
-    text-align: center;
-    margin-left: 500px;
-    height:50px;
-    width:500px;
+    text-align: left;
+    margin-left: 23%;
+    width:800px;
 
+} 
+.image img{
+    border:1px solid;
+    margin-left: 34%;
+    border-radius: 10%;
+    margin-top: -20px;
 }
  button {
     background-color:red;
     border-radius: 20%;
  }
 
-
+#myslider{
+    margin-left: 70%;
+    margin-top: 50px;
+    margin-bottom: -30px;
+    color: "red";
+}

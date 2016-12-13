@@ -7,8 +7,11 @@ vertical=0;
 function setup() {
   canvas= createCanvas(500,screenHeight);
   slider= createSlider(0,10,5);
+  slider.parent("myslider");
+  canvas.parent("page");
+
   // button= createButton('start');
-  percentage= slider.value();
+  
 }
 // function roundUp(num, precision) {
 //   return Math.ceil(num * precision) / (precision*precision);
@@ -21,19 +24,34 @@ function draw() {
   person_number=0;
   vert=0;
   total_number=10;
-  
+  fill(255);
+  stroke(255);
+  text("slider value:  " + slider.value(), 400, 20);
+//   fill(0);
+// stroke(255);
+// rect(0,0,350,30);
+// fill(255);
+//   text("percentage of women promoted compared to men: ", 10, 15);
+//   var y_label= 0;
   push();
  for (vert=0; vert<10; vert++){
   person_number=0;
     for (horiz=horizontal; horiz<10; horiz++){
       person_number++;
-      var women= (total_number-2.3)/(slider.value()/3.125);
+      var women= (total_number-2.3)/(8/slider.value()); 
       
-      if (person_number<=women){
-        color=colors[1];
+ if (person_number<=5 && vert==0 && slider.value()>0){
+  color=colors[1];
 }
 else if (person_number>women){
   color=colors[2];
+}
+else if (person_number<=5 && vert==0 && slider.value()>0){
+  color=colors[1];
+}
+
+else if (person_number<=women){
+        color=colors[1];
 }
 else {
   color=colors[0];
@@ -45,11 +63,10 @@ else {
   pop();
   translate(25,-100);
   push();
- 
   horizontal++;
   total_number--;
 }
-// button.mousePressed(button_pressed);
+
 }
 
 function draw_person(x_position, y_position) {
