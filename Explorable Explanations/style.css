@@ -1,5 +1,6 @@
 h1{
     font-family: "Trebuchet MS", Helvetica;
+    font-style: oblique;
     text-align: center;
 
 } 
@@ -9,7 +10,7 @@ body{
 
 canvas{
     vertical-align: top;
-    margin-left: 32%;
+    margin-left: 31%;
     }
 
 p{
@@ -21,16 +22,13 @@ p{
 } 
 .image img{
     border:1px solid;
-    margin-left: 34%;
-    border-radius: 10%;
+    margin-left: 35%;
+    border-radius: 5%;
     margin-top: -20px;
 }
- button {
-    background-color:red;
-    border-radius: 20%;
- }
 
 #myslider{
+    color: "black";
     margin-left: 70%;
     margin-top: 50px;
     margin-bottom: -30px;

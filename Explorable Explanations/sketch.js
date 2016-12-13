@@ -9,13 +9,7 @@ function setup() {
   slider= createSlider(0,10,5);
   slider.parent("myslider");
   canvas.parent("page");
-
-  // button= createButton('start');
-  
 }
-// function roundUp(num, precision) {
-//   return Math.ceil(num * precision) / (precision*precision);
-// }
 
 function draw() {
   background(0);
@@ -38,25 +32,44 @@ function draw() {
   person_number=0;
     for (horiz=horizontal; horiz<10; horiz++){
       person_number++;
-      var women= (total_number-2.3)/(8/slider.value()); 
-      
- if (person_number<=5 && vert==0 && slider.value()>0){
+      var women= (total_number-2.3)/(8/slider.value());
+     // if (women<=total_number/2){
+      if (person_number<=5 && vert==0){
   color=colors[1];
+}
+else if (person_number>5 && vert==0){
+  color=colors[2];
+}
+else if (person_number> total_number/2){
+  color=colors[2];
+}
+else if (slider.value()==9 && person_number< 2){
+  color=colors[1];
+}
+else if (slider.value()==10 && person_number<= total_number/2){
+  color=colors[1];
+
+}
+else if (slider.value()==10 && person_number> total_number/2){
+  color=colors[2];
+
+}
+else if (person_number<=women){
+        color=colors[1];
 }
 else if (person_number>women){
   color=colors[2];
 }
-else if (person_number<=5 && vert==0 && slider.value()>0){
-  color=colors[1];
-}
-
-else if (person_number<=women){
-        color=colors[1];
-}
-else {
-  color=colors[0];
-}
-
+// else{
+//   if (person_number<=total_number/2){
+//     color=colors[1];
+// }
+// else{ 
+//   color=colors[2];
+// }
+// }
+//  } 
+   
   draw_person(x_pos,y_pos);
   translate(50,0);
 }
