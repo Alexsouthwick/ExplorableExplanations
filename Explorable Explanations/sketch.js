@@ -21,6 +21,7 @@ function draw() {
   fill(255);
   stroke(255);
   text("slider value:  " + slider.value(), 400, 20);
+
 //   fill(0);
 // stroke(255);
 // rect(0,0,350,30);
@@ -60,15 +61,6 @@ else if (person_number<=women){
 else if (person_number>women){
   color=colors[2];
 }
-// else{
-//   if (person_number<=total_number/2){
-//     color=colors[1];
-// }
-// else{ 
-//   color=colors[2];
-// }
-// }
-//  } 
    
   draw_person(x_pos,y_pos);
   translate(50,0);
