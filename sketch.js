@@ -1,3 +1,7 @@
+//Explorable Explanation: Gender Inequality in STEM Business
+//By: Alex Southwick
+//All code and ideas are mine
+
 screenHeight= 1000;
 x_pos= 20;
 y_pos=screenHeight-50;
@@ -7,6 +11,7 @@ vertical=0;
 function setup() {
   canvas= createCanvas(500,screenHeight);
   slider= createSlider(0,10,5);
+
   //allows for CSS on p5 elements
   slider.parent("myslider");
   canvas.parent("page");
