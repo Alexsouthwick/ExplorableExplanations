@@ -7,9 +7,11 @@ vertical=0;
 function setup() {
   canvas= createCanvas(500,screenHeight);
   slider= createSlider(0,10,5);
+  //allows for CSS on p5 elements
   slider.parent("myslider");
   canvas.parent("page");
 }
+
 
 function draw() {
   background(0);
@@ -18,23 +20,23 @@ function draw() {
   person_number=0;
   vert=0;
   total_number=10;
+
+  //writes the slider number
   fill(255);
   stroke(255);
   text("slider value:  " + slider.value(), 400, 20);
-
-//   fill(0);
-// stroke(255);
-// rect(0,0,350,30);
-// fill(255);
-//   text("percentage of women promoted compared to men: ", 10, 15);
-//   var y_label= 0;
   push();
+
+  //creates pyramid of people
  for (vert=0; vert<10; vert++){
   person_number=0;
     for (horiz=horizontal; horiz<10; horiz++){
       person_number++;
+
+      //calculates number of women for each level using the slider
       var women= (total_number-2.3)/(8/slider.value());
-     // if (women<=total_number/2){
+
+     //if statements to determine which people become women 
       if (person_number<=5 && vert==0){
   color=colors[1];
 }
@@ -61,7 +63,8 @@ else if (person_number<=women){
 else if (person_number>women){
   color=colors[2];
 }
-   
+
+   //draws the people with the correct color- determined above
   draw_person(x_pos,y_pos);
   translate(50,0);
 }
@@ -74,6 +77,7 @@ else if (person_number>women){
 
 }
 
+ //function to draw the stick figures
 function draw_person(x_position, y_position) {
     self.x_position=x_position;
     self.y_position=y_position;
