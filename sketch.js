@@ -44,7 +44,7 @@ function draw() {
       //calculates number of women for each level using the slider
       var women= (total_number-2.3)/(8/slider.value());
 
-     //if statements to determine which people become women 
+     //if statements to determine which people become women through ranks
       if (person_number<=5 && vert==0){
   color=colors[1];
 }
