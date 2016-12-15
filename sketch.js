@@ -28,8 +28,11 @@ function draw() {
 
   //writes the slider number
   fill(255);
-  stroke(255);
+  stroke("red");
+  textSize(13);
   text("slider value:  " + slider.value(), 400, 20);
+  text("average percentage of women promoted", 10, 15);
+  text("compared to men at all levels:  " + slider.value()*10 + "%", 10, 35);
   push();
 
   //creates pyramid of people
