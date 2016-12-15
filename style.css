@@ -20,6 +20,11 @@ p{
     width:800px;
 
 } 
+
+#footnote{
+    margin-top: 50px;
+    font-size: 13px;
+}
 .image img{
     border:1px solid;
     margin-left: 35%;

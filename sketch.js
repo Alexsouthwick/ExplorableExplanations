@@ -26,7 +26,7 @@ function draw() {
   vert=0;
   total_number=10;
 
-  //writes the slider number
+  //writes the slider number and percentage of women
   fill(255);
   stroke("red");
   textSize(13);
